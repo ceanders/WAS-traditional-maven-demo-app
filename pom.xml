@@ -67,29 +67,22 @@
 
   <profiles>
     <profile>
-        <!-- When built in OpenShift the 'openshift' profile will be used when 
-            invoking mvn. -->
-        <!-- Use this profile for any OpenShift specific customization your app 
-            will need. -->
-        <id>openshift</id>
-        <build>
-            <plugins>
-                <plugin>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-maven-plugin</artifactId>
-                </plugin>
-            </plugins>
-            <resources>
-                <resource>
-                    <filtering>true</filtering><!-- if it is neccessary -->
-                    <directory>${project.basedir}/target</directory><!-- from -->
-                    <targetPath>/deployments</targetPath><!-- to adding ARTIFACT_DIR on openshift only finds the jar file but not the prop, so copy it manually like this-->
-                    <includes><!-- what -->
-                        <include>*.war</include>
-                    </includes>
-                </resource>
-            </resources>
-        </build>
-    </profile>
+      <!-- When built in OpenShift the 'openshift' profile will be used when invoking mvn.    -->
+      <!-- Use this profile for any OpenShift specific customization your app will need.      -->
+      <!-- By default that is to put the resulting archive into the 'deployments' folder. -->
+      <!-- http://maven.apache.org/guides/mini/guide-building-for-different-environments.html -->
+      <id>openshift</id>
+      <build>
+          <plugins>
+              <plugin>
+                  <artifactId>maven-war-plugin</artifactId>
+                  <version>${version.war.plugin}</version>
+                  <configuration>
+                      <outputDirectory>deployments</outputDirectory>
+                  </configuration>
+              </plugin>
+          </plugins>
+      </build>
+  </profile>
   </profiles>
 </project>
