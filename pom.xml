@@ -78,7 +78,7 @@
                   <artifactId>maven-war-plugin</artifactId>
                   <version>3.2.2</version>
                   <configuration>
-                      <outputDirectory>deployments</outputDirectory>
+                      <outputDirectory>/deployments</outputDirectory>
                   </configuration>
               </plugin>
           </plugins>
