@@ -1,0 +1,3 @@
+AdminApp.install('/tmp/demo.war', '[ -preCompileJSPs -distributeApp -nouseMetaDataFromBinary -nodeployejb -appname demo_war -createMBeansForResources -noreloadEnabled -nodeployws -validateinstall warn -noprocessEmbeddedConfig -filepermission .*\.dll=755#.*\.so=755#.*\.a=755#.*\.sl=755 -noallowDispatchRemoteInclude -noallowServiceRemoteInclude -asyncRequestDispatchType DISABLED -nouseAutoLink -noenableClientModule -clientMode isolated -novalidateSchema -contextroot / -MapModulesToServers [[ "Archetype Created Web Application" demo.war,WEB-INF/web.xml WebSphere:cell=DefaultCell01,node=DefaultNode01,server=server1 ]] -MapWebModToVH [[ "Archetype Created Web Application" demo.war,WEB-INF/web.xml default_host ]]]' )
+
+AdminConfig.save()
