@@ -1,4 +1,4 @@
-kind: DeploymentConfig
+kind: Deployment
 apiVersion: apps.openshift.io/v1
 metadata:
   annotations:
@@ -16,20 +16,8 @@ spec:
       maxSurge: 25%
     resources: {}
     activeDeadlineSeconds: 21600
-  triggers:
-    - type: ImageChange
-      imageChangeParams:
-        automatic: true
-        containerNames:
-          - maven-demo-app-war-app
-        from:
-          kind: ImageStreamTag
-          namespace: demo
-          name: 'maven-demo-app-war:latest'
-    - type: ConfigChange
   replicas: 2
   revisionHistoryLimit: 10
-  test: false
   selector:
     app: maven-demo-app-war-app
     deploymentconfig: maven-demo-app-war-app
