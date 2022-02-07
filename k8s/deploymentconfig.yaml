@@ -26,8 +26,6 @@ spec:
           kind: ImageStreamTag
           namespace: demo
           name: 'maven-demo-app-war:latest'
-        lastTriggeredImage: >-
-          image-registry.openshift-image-registry.svc:5000/demo/maven-demo-app-war@sha256:d3e7cb9f99ee324c1a4a8176862962da4e43ae41a0c4ed4d5a92c04360282dcd
     - type: ConfigChange
   replicas: 2
   revisionHistoryLimit: 10
@@ -46,7 +44,7 @@ spec:
       containers:
         - name: maven-demo-app-war-app
           image: >-
-            image-registry.openshift-image-registry.svc:5000/demo/maven-demo-app-war@sha256:d3e7cb9f99ee324c1a4a8176862962da4e43ae41a0c4ed4d5a92c04360282dcd
+            image-registry.openshift-image-registry.svc:5000/demo/maven-demo-app-war:latest
           ports:
             - containerPort: 9443
               protocol: TCP
