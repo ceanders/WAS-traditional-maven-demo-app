@@ -1,0 +1,24 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: maven-demo-app-war-app
+  namespace: demo
+  labels:
+    app: maven-demo-app-war-app
+    app.kubernetes.io/component: maven-demo-app-war-app
+    app.kubernetes.io/instance: maven-demo-app-war-app
+    app.kubernetes.io/name: maven-demo-app-war-app
+    app.kubernetes.io/part-of: maven-demo-app-war-app
+  annotations:
+    openshift.io/host.generated: 'true'
+spec:
+  to:
+    kind: Service
+    name: maven-demo-app-war-app
+    weight: 100
+  port:
+    targetPort: 9443-tcp
+  tls:
+    termination: passthrough
+    insecureEdgeTerminationPolicy: Redirect
+  wildcardPolicy: None
