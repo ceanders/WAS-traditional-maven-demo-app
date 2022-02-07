@@ -37,9 +37,9 @@ spec:
     deploymentconfig: maven-demo-app-war-app
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: maven-demo-app-war-app
+        deploymentconfig: maven-demo-app-war-app
       annotations:
         openshift.io/generated-by: OpenShiftWebConsole
     spec:
