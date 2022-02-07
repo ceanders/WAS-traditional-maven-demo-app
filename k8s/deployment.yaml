@@ -6,7 +6,7 @@ metadata:
   name: maven-demo-app-war-app
   namespace: demo
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: maven-demo-app-war-app
