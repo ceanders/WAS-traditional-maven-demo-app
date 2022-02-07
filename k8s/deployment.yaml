@@ -6,18 +6,7 @@ metadata:
   name: maven-demo-app-war-app
   namespace: demo
 spec:
-  strategy:
-    type: Rolling
-    rollingParams:
-      updatePeriodSeconds: 1
-      intervalSeconds: 1
-      timeoutSeconds: 600
-      maxUnavailable: 25%
-      maxSurge: 25%
-    resources: {}
-    activeDeadlineSeconds: 21600
   replicas: 2
-  revisionHistoryLimit: 10
   selector:
     app: maven-demo-app-war-app
     deploymentconfig: maven-demo-app-war-app
@@ -36,12 +25,3 @@ spec:
           ports:
             - containerPort: 9443
               protocol: TCP
-          resources: {}
-          terminationMessagePath: /dev/termination-log
-          terminationMessagePolicy: File
-          imagePullPolicy: IfNotPresent
-      restartPolicy: Always
-      terminationGracePeriodSeconds: 30
-      dnsPolicy: ClusterFirst
-      securityContext: {}
-      schedulerName: default-scheduler
