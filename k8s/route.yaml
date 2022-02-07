@@ -3,12 +3,6 @@ apiVersion: route.openshift.io/v1
 metadata:
   name: maven-demo-app-war-app
   namespace: demo
-  labels:
-    app: maven-demo-app-war-app
-    app.kubernetes.io/component: maven-demo-app-war-app
-    app.kubernetes.io/instance: maven-demo-app-war-app
-    app.kubernetes.io/name: maven-demo-app-war-app
-    app.kubernetes.io/part-of: maven-demo-app-war-app
   annotations:
     openshift.io/host.generated: 'true'
 spec:

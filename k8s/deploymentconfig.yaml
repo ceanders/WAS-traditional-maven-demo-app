@@ -5,15 +5,6 @@ metadata:
     openshift.io/generated-by: OpenShiftWebConsole
   name: maven-demo-app-war-app
   namespace: demo
-  labels:
-    app: maven-demo-app-war-app
-    app.kubernetes.io/component: maven-demo-app-war-app
-    app.kubernetes.io/instance: maven-demo-app-war-app
-    app.kubernetes.io/name: maven-demo-app-war-app
-    app.kubernetes.io/part-of: maven-demo-app-war-app
-    app.openshift.io/runtime: maven-demo-app-war
-    app.openshift.io/runtime-namespace: demo
-    app.openshift.io/runtime-version: latest
 spec:
   strategy:
     type: Rolling
@@ -49,7 +40,6 @@ spec:
       creationTimestamp: null
       labels:
         app: maven-demo-app-war-app
-        deploymentconfig: maven-demo-app-war-app
       annotations:
         openshift.io/generated-by: OpenShiftWebConsole
     spec:

@@ -4,11 +4,6 @@ metadata:
   name: maven-demo-app-war-app
   namespace: demo
   labels:
-    app: maven-demo-app-war-app
-    app.kubernetes.io/component: maven-demo-app-war-app
-    app.kubernetes.io/instance: maven-demo-app-war-app
-    app.kubernetes.io/name: maven-demo-app-war-app
-    app.kubernetes.io/part-of: maven-demo-app-war-app
   annotations:
     openshift.io/generated-by: OpenShiftWebConsole
 spec:
@@ -19,6 +14,5 @@ spec:
       targetPort: 9443
   selector:
     app: maven-demo-app-war-app
-    deploymentconfig: maven-demo-app-war-app
   type: ClusterIP
   sessionAffinity: None
