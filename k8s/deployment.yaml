@@ -8,8 +8,9 @@ metadata:
 spec:
   replicas: 2
   selector:
-    app: maven-demo-app-war-app
-    deploymentconfig: maven-demo-app-war-app
+    matchLabels:
+      app: maven-demo-app-war-app
+      deploymentconfig: maven-demo-app-war-app
   template:
     metadata:
       labels:
