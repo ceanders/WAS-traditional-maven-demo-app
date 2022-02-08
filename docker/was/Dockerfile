@@ -1,1 +1,1 @@
-FROM docker.io/ibmcom/websphere-traditional:9.0.5.10
+FROM docker.io/ibmcom/websphere-traditional:8.5.5.20
