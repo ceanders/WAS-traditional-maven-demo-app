@@ -6,7 +6,7 @@ tag:
   name: '8.5.5.20'
   from:
     kind: DockerImage
-    name: 'ibmcom/websphere-traditional:'
+    name: 'ibmcom/websphere-traditional:8.5.5.20'
   generation: 2
   importPolicy: {}
   referencePolicy:
