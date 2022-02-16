@@ -1,1 +1,0 @@
-FROM docker.io/ibmcom/websphere-traditional:8.5.5.20
