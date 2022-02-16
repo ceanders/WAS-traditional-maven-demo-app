@@ -1,0 +1,15 @@
+kind: ImageStreamTag
+apiVersion: image.openshift.io/v1
+metadata:
+  name: 'websphere-traditional:8.5.5.20'
+tag:
+  name: '8.5.5.20'
+  from:
+    kind: DockerImage
+    name: 'ibmcom/websphere-traditional:8.5.5.20'
+  generation: 2
+  importPolicy: {}
+  referencePolicy:
+    type: Local
+lookupPolicy:
+  local: false
