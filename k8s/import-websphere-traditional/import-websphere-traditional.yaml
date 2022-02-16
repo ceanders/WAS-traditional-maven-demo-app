@@ -48,7 +48,7 @@ spec:
     dockerStrategy:
       from:
         kind: ImageStreamTag
-        name: 'websphere-traditional:8.5.5.20'
+        name: 'websphere-traditional:9.0.5.10'
   postCommit: {}
   source:
     type: Dockerfile
