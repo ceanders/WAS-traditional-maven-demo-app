@@ -6,7 +6,6 @@ metadata:
     image.openshift.io/triggers: >-
       [{"from":{"kind":"ImageStreamTag","name":"maven-demo-app-war:latest","namespace":"demo"},"fieldPath":"spec.template.spec.containers[?(@.name==\"maven-demo-app-war-app\")].image","pause":"false"}]
   name: maven-demo-app-war-app
-  namespace: demo
 spec:
   replicas: 3
   selector:

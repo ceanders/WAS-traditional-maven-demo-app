@@ -1,8 +1,7 @@
 apiVersion: tekton.dev/v1beta1
 kind: PipelineRun
 metadata:
-  name: maven-demo-app-build-and-deploy-2
-  namespace: demo
+  name: maven-demo-app-build-and-deploy-3
   labels:
     tekton.dev/pipeline: maven-demo-app-build-and-deploy
 spec:

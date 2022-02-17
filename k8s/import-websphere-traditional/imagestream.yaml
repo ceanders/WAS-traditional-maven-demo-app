@@ -9,4 +9,4 @@ spec:
     - name: 'prod'
       from:
         kind: DockerImage
-        name: 'ibmcom/websphere-traditional:8.5.5.20'
+        name: 'ibmcom/websphere-traditional:9.0.5.10'

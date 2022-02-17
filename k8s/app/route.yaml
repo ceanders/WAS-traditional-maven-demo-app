@@ -2,7 +2,6 @@ kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
   name: maven-demo-app-war-app
-  namespace: demo
   annotations:
     openshift.io/host.generated: 'true'
 spec:

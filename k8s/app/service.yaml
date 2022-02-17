@@ -2,7 +2,6 @@ kind: Service
 apiVersion: v1
 metadata:
   name: maven-demo-app-war-app
-  namespace: demo
   labels:
   annotations:
     openshift.io/generated-by: OpenShiftWebConsole
