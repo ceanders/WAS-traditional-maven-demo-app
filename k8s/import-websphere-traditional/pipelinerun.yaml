@@ -1,7 +1,7 @@
 apiVersion: tekton.dev/v1beta1
 kind: PipelineRun
 metadata:
-  generateName: import-websphere-traditional-
+  name: import-websphere-traditional-1
   namespace: demo
   labels:
     tekton.dev/pipeline: import-websphere-traditional
