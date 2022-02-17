@@ -1,0 +1,21 @@
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
+metadata:
+  name: maven-demo-app-build-and-deploy-1
+  namespace: demo
+  labels:
+    tekton.dev/pipeline: maven-demo-app-build-and-deploy
+spec:
+  pipelineRef:
+    name: maven-demo-app-build-and-deploy
+  serviceAccountName: pipeline
+  timeout: 1h0m0s
+  workspaces:
+    - name: scratchpad
+      volumeClaimTemplate:
+        spec:
+          accessModes:
+            - ReadWriteOnce
+          resources:
+            requests:
+              storage: 1Gi
