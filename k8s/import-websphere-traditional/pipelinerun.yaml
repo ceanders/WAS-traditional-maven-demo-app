@@ -1,0 +1,25 @@
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
+metadata:
+  generateName: import-websphere-traditional-
+  namespace: demo
+  labels:
+    tekton.dev/pipeline: import-websphere-traditional
+spec:
+  pipelineRef:
+    name: import-websphere-traditional
+  serviceAccountName: pipeline
+  timeout: 1h0m0s
+  workspaces:
+    - name: scratchpad
+      volumeClaimTemplate:
+        metadata:
+          creationTimestamp: null
+        spec:
+          accessModes:
+            - ReadWriteOnce
+          resources:
+            requests:
+              storage: 1Gi
+          storageClassName: gp2
+          volumeMode: Filesystem
