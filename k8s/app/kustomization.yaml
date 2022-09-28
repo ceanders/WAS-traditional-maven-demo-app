@@ -1,9 +1,5 @@
 # This file exists so that kubectl apply -k <github URL> works.
 resources:
-  - bucket.yaml
-  - kubernetescluster.yaml
-  - machineinstance.yaml
-  - mysqlinstance.yaml
-  - nosqlinstance.yaml
-  - postgresqlinstance.yaml
-  - rediscluster.yaml
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
